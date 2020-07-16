@@ -262,6 +262,8 @@ describe('mergedTableRemoveRow', () => {
 
       range.setStartAfter(wwe.getBody().querySelectorAll('tbody td')[0].firstChild);
       range.setEndAfter(wwe.getBody().querySelectorAll('tbody td')[3].firstChild);
+      range.collapse(true);
+
       sq.setSelection(range);
       sq._updatePathOnEvent(); // squire need update path for hasFormatWithRx
 

@@ -210,6 +210,8 @@ describe('mergedTableRemoveCol', () => {
 
       range.setStartAfter(wwe.getBody().querySelectorAll('tbody td')[0].firstChild);
       range.setEndAfter(wwe.getBody().querySelectorAll('tbody td')[1].firstChild);
+      range.collapse(true);
+
       sq.setSelection(range);
 
       const commandManager = getWwRemoveColumnCommand(editor);
